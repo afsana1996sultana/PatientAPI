@@ -29,7 +29,7 @@ namespace PatientAPI.Controllers
         [HttpPost("signup")]
         public IActionResult SignUp([FromBody] UserModel userObj)
         {
-            if(userObj == null) base 
+            if(userObj == null)  
             {
                 return BadRequest();
             }

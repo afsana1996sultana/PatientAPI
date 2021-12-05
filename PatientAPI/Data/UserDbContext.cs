@@ -7,19 +7,21 @@ using System.Threading.Tasks;
 
 namespace PatientAPI.Data
 {
-    public class UserDbContext: DbContext
+    public class UserDbContext : DbContext
     {
-        public UserDbContext(DbContextOptions<UserDbContext>options)):base(options)
-        
-
+        public UserDbContext(DbContextOptions<UserDbContext> options) : base(options)
+        {
         }
-    public DbSet<UserModel> userModels { get; set; }
-    public DbSet<PatientModel> patientModels { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<UserModel>().ToTable("tbl_user");
-        modelBuilder.Entity<PatientModel>().ToTable("tbl_patient");
+
+        public DbSet<UserModel> userModels { get; set; }
+        public DbSet<PatientModel> patientModels { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UserModel>().ToTable("tbl_user");
+            modelBuilder.Entity<PatientModel>().ToTable("tbl_patient");
+        }
     }
-    }
+}
 
