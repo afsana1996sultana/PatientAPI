@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'patient-api';
+  myimage:string ="assets/image/patient.jpg";
+
 }

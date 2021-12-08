@@ -1,0 +1,271 @@
+<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body background="~/Image/appointment.jpg" style="background-repeat:no-repeat;height:fit-content; width:fit-content;">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <div id="login-overlay" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p>
+                    The applicant acknowledges and undertakes to commit to make all the medical examinations required
+                    to travel to the GCC countries, in addition to any other additional examinations such as COVID-19
+                    test or PCR, etc. that may be required by airlines, airport management, or any other party to travel
+                    to the GCC countries for which the Council is not responsible in any way.
+                </p>
+            </div>
+
+            <!-- Name Section -->
+            <div class="row">
+                <div class="col-md-11 col-md-offset-1">
+                    <form class="form-horizontal" role="form">
+                        <fieldset>
+                            <!-- Form Name -->
+                            <legend>Location</legend>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>Country</span>
+                                    <select type="country" placeholder="Select your country" class="form-control">
+                                        <option value="Select your country">Select your country </option>
+                                        <option value="bangladesh">Bangladesh</option>
+                                        <option value="india">India</option>
+                                        <option value="soudi">Soudi</option>
+                                        <option value="dubai">Dubai</option>
+                                        <option value="itely">Itely</option>
+                                        <option value="bahrain">Bahrain</option>
+                                        <option value="australia">Australia</option>
+                                        <option value="belgium">Belgium</option>
+                                        <option value="japan">Japan</option>
+                                        <option value="malaysia">Malaysia</option>
+                                        <option value="newzealand">New Zealand</option>
+                                        <option value="russia">Russia</option>
+                                        <option value="singapore">Singapore</option>
+                                        <option value="united kingdom">United Kingdom</option>
+                                        <option value="america">America</option>
+                                        <option value="spain">Spain</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <span>City</span>
+                                    <select type="city" placeholder="Select your city" class="form-control">
+                                        <option value="Select your city">Select your city </option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Rajshahi">Rajshahi</option>
+                                        <option value="Gazipur">Gazipur</option>
+                                        <option value="Pabna">Pabna</option>
+                                        <option value="Natore">Natore</option>
+                                        <option value="Chittagong">Chittagong</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Rangpur ">Rangpur</option>
+                                        <option value="Comilla">Comilla</option>
+                                        <option value="Mymensingh">Mymensingh</option>
+                                        <option value="Bogra">Bogra</option>
+                                        <option value="Sherpur">Sherpur</option>
+                                        <option value="Lalmonirhat">Lalmonirhat</option>
+                                        <option value="Narail">Narail</option>
+                                        <option value="Tungi">Tungi</option>
+                                        <option value="Barisal">Barisal</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br />
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>Country Traveling To</span>
+                                    <select type="country" placeholder="Select GCC country" class="form-control">
+                                        <option value="Select your country">Select GCC country</option>
+                                        <option value="india">India</option>
+                                        <option value="soudi">Soudi</option>
+                                        <option value="dubai">Dubai</option>
+                                        <option value="itely">Itely</option>
+                                        <option value="bahrain">Bahrain</option>
+                                        <option value="australia">Australia</option>
+                                        <option value="belgium">Belgium</option>
+                                        <option value="japan">Japan</option>
+                                        <option value="malaysia">Malaysia</option>
+                                        <option value="newzealand">New Zealand</option>
+                                        <option value="russia">Russia</option>
+                                        <option value="singapore">Singapore</option>
+                                        <option value="united kingdom">United Kingdom</option>
+                                        <option value="america">America</option>
+                                        <option value="spain">Spain</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br />
+
+                            <!-- Address Section -->
+                            <!-- Form Name -->
+                            <legend>Candidate's information</legend>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>First Name</span>
+                                    <input type="text" name="fistName" placeholder="First name" class="form-control">
+                                </div>
+                                <div class="col-sm-5">
+                                    <span>Last Name</span>
+                                    <input type="text" name="lastName" placeholder="Last name" class="form-control">
+                                </div>
+                            </div>
+                            <br />
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>Date of Birth</span>
+                                    <input type="date" placeholder="Date Of Birth" class="form-control">
+                                </div>
+                                <div class="col-sm-5">
+                                    <span>Nationality</span>
+                                    <input type="text" name="nationality" class="form-control">
+                                </div>
+                            </div>
+                            <br />
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <p>Gender</p>
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" name="Male">  Male
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" name="Female">   Female
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <p>Marital Status</p>
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" name="Married">  Married
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" name="Single">   Single
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>Email ID</span>
+                                    <input type="text" placeholder="Your@mail.com" class="form-control">
+                                </div>
+                                <div class="col-sm-5">
+                                    <span>Phone No</span>
+                                    <input type="number" placeholder="put your phone number" class="form-control">
+                                </div>
+                            </div>
+                            <br />
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>National ID optional</span>
+                                    <input type="number" class="form-control">
+                                </div>
+                            </div>
+                            <br />
+
+                            <!-- Parent/Guadian Contact Section -->
+                            <!-- Form Name -->
+                            <legend>Legal Information</legend>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>Passport No</span>
+                                    <input type="number" name="pFistName" class="form-control">
+                                </div>
+                                <div class="col-sm-5">
+                                    <span>Confirm Passport No</span>
+                                    <input type="number" name="pLastName" class="form-control">
+                                </div>
+                            </div>
+                            <br />
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>Passport Issue Date</span>
+                                    <input type="date" placeholder="Select date" name="pFistName" class="form-control">
+                                </div>
+                                <div class="col-sm-5">
+                                    <span>Passport Issue Place</span>
+                                    <input type="text" name="pLastName" class="form-control">
+                                </div>
+                            </div>
+                            <br />
+
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>Passport Expiry Date</span>
+                                    <input type="date" placeholder="Select date" name="pFistName" class="form-control">
+                                </div>
+                                <div class="col-sm-5">
+                                    <span>Visa Type</span>
+                                    <select type="visa" placeholder="Select your visa type" class="form-control">
+                                        <option value="Select your city">Select your visa type </option>
+                                        <option value="Work Visa">Work Visa</option>
+                                        <option value="Family Visa">Family Visa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br />
+
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <span>Position Applied For</span>
+                                    <input type="text" name="pFistName" class="form-control">
+                                </div>
+                                <div class="col-sm-5">
+                                    <span>Other</span>
+                                    <input type="text" name="pLastName" class="form-control">
+                                </div>
+                            </div>
+                            <br />
+
+                            <!-- Text input-->
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="col-sm-11">
+                                        <input type="checkbox" name="alart">I confirm that the information given in this from is true, complete and accurate
+                                    </div>
+                                </div>
+                                <hr />
+                            </div>
+
+                            <!-- Command -->
+                            <div class="form-group">
+                                <div class="col-sm-9 col-sm-offset-1">
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-primary">submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div>
+    </div>
+    <script type="text/javascript">
+    </script>
+</body>
+</html>
+
