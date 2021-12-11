@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  imageURL: any;
 
-  constructor() { }
+  constructor(
+
+
+  ) { }
 
   ngOnInit(): void {
+    this.imageURL ="/src/assets/images";
+
   }
 
 }

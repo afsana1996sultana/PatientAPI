@@ -5,14 +5,16 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GetappointmentComponent } from './getappointment/getappointment.component';
+import { AppointmentlistComponent } from './appointmentlist/appointmentlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     routingComponents,
+    GetappointmentComponent,
+    AppointmentlistComponent,
 
   ],
   imports: [
