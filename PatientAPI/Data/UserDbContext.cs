@@ -16,11 +16,14 @@ namespace PatientAPI.Data
 
         public DbSet<UserModel> userModels { get; set; }
         public DbSet<PatientModel> patientModels { get; set; }
+        public DbSet<LoginModel> loginModels { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserModel>().ToTable("tbl_user");
             modelBuilder.Entity<PatientModel>().ToTable("tbl_patient");
+            modelBuilder.Entity<LoginModel>().ToTable("tbl_login");
         }
     }
 }
