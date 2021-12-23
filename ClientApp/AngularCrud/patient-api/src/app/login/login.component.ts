@@ -13,6 +13,20 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   clickFunction() {
-    this.apiService.login();
+    // this.apiService.get()
+    //   .subscribe({
+    //     next: (data) => {
+    //       console.log(data);
+    //     },
+    //     error: (e) => console.error(e)
+    //   });
+    this.apiService.login()
+      .subscribe({
+        next: (res:string) => {
+          console.log(res);
+          
+        },
+        //error: (e) => console.error(e)
+      });
   }
 }

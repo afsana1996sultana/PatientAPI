@@ -20,6 +20,7 @@ namespace PatientAPI.Controllers
             _context = userDbContext;
         }
 
+        
         [HttpPost("add_patient")]
         public IActionResult AddPatient([FromBody] PatientModel patientObj)
         {
@@ -38,6 +39,7 @@ namespace PatientAPI.Controllers
                 });
             }
         }
+        
         [HttpPut("update_patient")]
         public IActionResult UpdatePatient([FromBody] PatientModel patientObj)
         {
@@ -65,6 +67,7 @@ namespace PatientAPI.Controllers
                 });
             }
         }
+        
         [HttpDelete("delete_patient/{id}")]
         public IActionResult DeletePatient(int id)
         {
@@ -88,6 +91,7 @@ namespace PatientAPI.Controllers
                 });
             }
         }
+
         [HttpGet("get_all_patient")]
         public IActionResult GetAllPatient()
         {
@@ -120,6 +124,12 @@ namespace PatientAPI.Controllers
 
                 });
             }
+        }
+
+        [HttpGet("gettest")]
+        public ActionResult<string> GetTest()
+        {
+            return "Hello From Api";
         }
     }
 }

@@ -45,6 +45,7 @@ namespace PatientAPI.Controllers
                 });
             }
         }
+        
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserModel userObj)
         {
@@ -106,9 +107,9 @@ namespace PatientAPI.Controllers
 
 
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpPost("loginUser")]
-        public IActionResult LoginUser(LoginModel model)
+        public ActionResult<string> LoginUser(LoginModel model)
         {
             if (model == null)
             {
@@ -137,7 +138,7 @@ namespace PatientAPI.Controllers
             //    //        });
             //    //    }
             //    //}
-            return null;
+            return "Success";
         }
 
     }

@@ -29,6 +29,16 @@ namespace PatientAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                  "CorsPolicy",
+                  builder => builder.WithOrigins("http://localhost:4200")
+                  .AllowAnyMethod()
+                  .AllowAnyHeader()
+                  .AllowCredentials());
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -50,6 +60,8 @@ namespace PatientAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
