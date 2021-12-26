@@ -14,11 +14,8 @@ export class ApiServiceService {
   constructor(
     private http: HttpClient
 ) {}
-login() : Observable<string>{
-  let  model : LoginModel;
-  model = new LoginModel();
-  model.userName="Tanvir";
-  model.passwords="Tanvir@1";
+login(model:LoginModel) : Observable<string>{
+ 
   return this.http.post<string>(`${baseUrl}Login/loginUser`, model);
 
 }   

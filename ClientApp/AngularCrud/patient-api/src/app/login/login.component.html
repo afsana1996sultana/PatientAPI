@@ -20,7 +20,12 @@
           <p style="color: #59238F;">Sign-Up</p>
       </div>
   </div> -->
-  <button (click)="clickFunction()" class="btn btn-success">Click Me</button>
-
+  <div>
+    <form #patientForm="ngForm">
+      <input id="uname" type="text" [(ngModel)]="model.userName" name="Username" placeholder="Username"> 
+      <input id="pass" type="password" [(ngModel)]="model.passwords" name="Password" placeholder="Password"> 
+      <button (click)="clickFunction()" class="btn btn-success">Click Me</button>
+    </form>
+  </div>
   </body>
 </html>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiServiceService } from '../services/api-service.service';
+import { ApiServiceService, LoginModel } from '../services/api-service.service';
 
 @Component({
   selector: 'app-login',
@@ -8,19 +8,15 @@ import { ApiServiceService } from '../services/api-service.service';
   providers: [ApiServiceService]
 })
 export class LoginComponent implements OnInit {
-
-  constructor(private apiService: ApiServiceService) { }
+  model = new  LoginModel();
+  constructor(private apiService: ApiServiceService//, public model : LoginModel    
+    ) { }
   ngOnInit(): void {
+    
   }
   clickFunction() {
-    // this.apiService.get()
-    //   .subscribe({
-    //     next: (data) => {
-    //       console.log(data);
-    //     },
-    //     error: (e) => console.error(e)
-    //   });
-    this.apiService.login()
+    
+    this.apiService.login(this.model)
       .subscribe({
         next: (res:string) => {
           console.log(res);

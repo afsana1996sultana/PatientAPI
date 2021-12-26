@@ -115,30 +115,30 @@ namespace PatientAPI.Controllers
             {
                 return BadRequest();
             }
-            //    //else
-            //    //{
-            //    //    var user = _context.userModels.Where(a =>
-            //    //    a.UserName == userObj.UserName
-            //    //    && a.Password == userObj.Password).FirstOrDefault();
-            //    //    if (user != null)
-            //    //    {
-            //    //        return Ok(new
-            //    //        {
-            //    //            StatusCode = 200,
-            //    //            Message = "Logged In Successfully",
-            //    //            UserData = userObj.FullName
-            //    //        });
-            //    //    }
-            //    //    else
-            //    //    {
-            //    //        return NotFound(new
-            //    //        {
-            //    //            StatusCode = 404,
-            //    //            Message = "User Not Found"
-            //    //        });
-            //    //    }
-            //    //}
-            return "Success";
+            else
+            {
+                var user = _context.userModels.Where(a =>
+                a.UserName == model.UserName
+                && a.Password == model.Passwords).FirstOrDefault();
+                if (user != null)
+                {
+                    return Ok(new
+                    {
+                        StatusCode = 200,
+                        Message = "Success",
+                        UserData = model.UserName
+                    });
+                }
+                else
+                {
+                    return NotFound(new
+                    {
+                        StatusCode = 404,
+                        Message = "User Not Found"
+                    });
+                }
+            }
+            
         }
 
     }
