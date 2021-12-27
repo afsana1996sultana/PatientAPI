@@ -23,7 +23,7 @@ namespace PatientAPI.Data
         {
             modelBuilder.Entity<UserModel>().ToTable("tbl_user");
             modelBuilder.Entity<PatientModel>().ToTable("tbl_patient");
-            modelBuilder.Entity<LoginModel>().ToTable("tbl_login");
+            modelBuilder.Entity<LoginModel>().ToTable("tbl_loginuser");
         }
     }
 }

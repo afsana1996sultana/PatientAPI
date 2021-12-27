@@ -79,34 +79,6 @@ namespace PatientAPI.Controllers
         }
 
 
-
-
-
-
-
-        //[HttpPost("loginUser")]
-        //public IActionResult LoginUser([FromBody] LoginModel loginuserObj)
-        //{
-        //    if (loginuserObj == null)
-        //    {
-        //        return BadRequest();
-        //    }
-        //    else
-        //    {
-        //        _context.loginModels.Add(loginuserObj);
-        //        _context.SaveChanges();
-        //        return Ok(new
-        //        {
-        //            StatusCode = 200,
-        //            Message = "LoginUser Added Successfully"
-        //        });
-        //    }
-        //}
-
-
-
-
-
         //[AllowAnonymous]
         [HttpPost("loginUser")]
         public ActionResult<string> LoginUser(LoginModel model)
@@ -117,9 +89,9 @@ namespace PatientAPI.Controllers
             }
             else
             {
-                var user = _context.userModels.Where(a =>
+                var user = _context.loginModels.Where(a =>
                 a.UserName == model.UserName
-                && a.Password == model.Passwords).FirstOrDefault();
+                && a.Passwords == model.Passwords).FirstOrDefault();
                 if (user != null)
                 {
                     return Ok(new
