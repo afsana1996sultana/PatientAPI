@@ -81,7 +81,7 @@ namespace PatientAPI.Controllers
 
         //[AllowAnonymous]
         [HttpPost("loginUser")]
-        public ActionResult<string> LoginUser(LoginModel model)
+        public IActionResult LoginUser(LoginModel model)
         {
             if (model == null)
             {
@@ -98,15 +98,16 @@ namespace PatientAPI.Controllers
                     {
                         StatusCode = 200,
                         Message = "Success",
-                        UserData = model.UserName
+                        Data = model.UserName
                     });
                 }
                 else
                 {
-                    return NotFound(new
+                    return Ok(new
                     {
                         StatusCode = 404,
-                        Message = "User Not Found"
+                        Message = "User Not Found",
+                        Data = ""
                     });
                 }
             }

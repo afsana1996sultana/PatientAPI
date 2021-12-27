@@ -16,7 +16,7 @@ namespace PatientAPI.Models
         public string MedicalCenter { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public string DateOfBirth { get; set; }
         public string Nationality { get; set; }
         public string Gender { get; set; }
         public string MaritalStatus { get; set; }
@@ -25,9 +25,9 @@ namespace PatientAPI.Models
         public string NationalId { get; set; }
         public string PassportNo { get; set; }
         public string ConfirmPassportNo { get; set; }
-        public DateTime PassportIssueDate { get; set; }
+        public string PassportIssueDate { get; set; }
         public string PassportIssuePlace { get; set; }
-        public DateTime PassportExpiryDate { get; set; }
+        public string PassportExpiryDate { get; set; }
         public string VisaType { get; set; }
         public string PositionAppliedFor { get; set; }
         public string Other { get; set; }

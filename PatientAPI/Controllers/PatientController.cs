@@ -22,15 +22,15 @@ namespace PatientAPI.Controllers
 
         
         [HttpPost("add_patient")]
-        public IActionResult AddPatient([FromBody] PatientModel patientObj)
+        public ActionResult<string> AddPatient(PatientModel model)
         {
-            if(patientObj == null)
+            if(model == null)
             {
                 return BadRequest();
             }
             else
             {
-                _context.patientModels.Add(patientObj);
+                _context.patientModels.Add(model);
                 _context.SaveChanges();
                 return Ok(new
                 {
