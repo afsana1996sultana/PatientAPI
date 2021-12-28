@@ -9,9 +9,11 @@ import { ApiServiceService, LoginModel } from '../services/api-service.service';
 })
 export class LoginComponent implements OnInit {
   model = new  LoginModel();
+  router: any;
   constructor(private apiService: ApiServiceService//, public model : LoginModel    
     ) { }
   ngOnInit(): void {
+    const navigationDetails: string[] = ['/home'];
     
   }
   clickFunction() {
@@ -19,9 +21,6 @@ export class LoginComponent implements OnInit {
     this.apiService.login(this.model)
       .subscribe({
         next: (res) => {
-          //console.log(res);
-         
-          //let response : responseModel  = JSON.parse(res);
           if(res.statusCode === 200 && res.message==='Success')
           {
             alert('Login success');
@@ -29,8 +28,8 @@ export class LoginComponent implements OnInit {
           else{
             alert('Login error');
           }
+          this.router.navigateByUrl('/home');
         },
-        //error: (e) => console.error(e)
       });
   }
 }
