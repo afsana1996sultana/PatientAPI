@@ -82,7 +82,7 @@ namespace PatientAPI.Controllers
         //[AllowAnonymous]
         [HttpPost("loginUser")]
         public IActionResult LoginUser(LoginModel model)
-        {
+         {
             if (model == null)
             {
                 return BadRequest();
